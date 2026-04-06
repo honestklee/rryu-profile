@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff8f0;
+  --foreground: #5e0006;
+  --color-primary: #5e0006;
+  --color-secondary: #c08552;
+  --color-accent: #eed9b9;
+  --color-surface: #eed9b9;
+  --color-background: #fff8f0;
 }
 
 @theme inline {
@@ -10,17 +15,59 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Align legacy purple/pink utilities with the warm palette */
+  --color-purple-50: #fff8f0;
+  --color-purple-100: #f2e4cc;
+  --color-purple-200: #eed9b9;
+  --color-purple-300: #d4b896;
+  --color-purple-500: #c08552;
+  --color-purple-600: #b0784a;
+  --color-purple-700: #9a6540;
+  --color-purple-800: #7a4a2e;
+  --color-purple-900: #5e0006;
+  --color-pink-100: #ffe8dc;
+  --color-pink-700: #a66f45;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #5e0006;
+    --foreground: #fff8f0;
   }
+}
+
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: color-mix(in srgb, #c08552 25%, transparent);
+}
+
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 217, 185, 0.85) 0%,
+    rgba(255, 248, 240, 0.95) 45%,
+    rgba(238, 217, 185, 0.85) 90%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
