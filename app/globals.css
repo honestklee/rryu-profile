@@ -29,17 +29,11 @@
   --color-pink-700: #a66f45;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #5e0006;
-    --foreground: #fff8f0;
-  }
-}
-
 html {
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  color-scheme: light;
 }
 
 body {
@@ -49,6 +43,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: clip;
   -webkit-tap-highlight-color: color-mix(in srgb, #c08552 25%, transparent);
+  color-scheme: light;
 }
 
 

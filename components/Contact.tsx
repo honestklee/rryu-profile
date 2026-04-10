@@ -28,6 +28,14 @@ const Contact = () => {
   const { scrollY } = useScroll();
   const ready = useSectionReady(500);
 
+  const buildGmailComposeUrl = (to: string, subject: string, body: string) => {
+    const base = gmailComposeTo(to);
+    const params = new URLSearchParams();
+    if (subject) params.set('su', subject);
+    if (body) params.set('body', body);
+    return `${base}&${params.toString()}`;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -39,10 +47,17 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      '',
+      formData.message
+    ].join('\n');
+
+    const url = buildGmailComposeUrl(CONTACT_EMAIL, formData.subject, body);
+    window.open(url, '_blank', 'noopener,noreferrer');
+
+    alert('Your message draft is ready in Gmail.');
     setFormData({ name: '', email: '', subject: '', message: '' });
     setIsSubmitting(false);
   };

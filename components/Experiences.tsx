@@ -98,26 +98,28 @@ const Experiences = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full" 
-               style={{ backgroundColor: '#EED9B9' }}></div>
+          <div
+            className="absolute left-4 sm:left-6 top-0 bottom-0 w-1"
+            style={{ backgroundColor: '#EED9B9' }}
+          ></div>
 
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ amount: 0.2 }}
-              className={`relative flex items-center mb-12 ${
-                index % 2 === 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              className="relative mb-12 pl-12 sm:pl-16"
             >
               {/* Timeline dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-white z-10"
-                   style={{ backgroundColor: '#C08552' }}></div>
+              <div
+                className="absolute left-4 sm:left-6 top-6 -translate-x-1/2 w-6 h-6 rounded-full border-4 border-white z-10"
+                style={{ backgroundColor: '#C08552' }}
+              ></div>
 
               {/* Content card */}
-              <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+              <div className="w-full">
                 <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
                   className="bg-white rounded-2xl shadow-xl p-6 border border-purple-100"

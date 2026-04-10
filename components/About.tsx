@@ -23,9 +23,9 @@ const About = () => {
   
   const skills = [
     { name: 'Python', icon: <PythonOutlined />, level: 95 },
-    { name: 'React', icon: <ClusterOutlined />, level: 85 },
+    { name: 'React', icon: <ClusterOutlined />, level: 95 },
     { name: 'Next.js', icon: <RocketOutlined />, level: 95 },
-    { name: 'Laravel', icon: <ApiOutlined />, level: 90 },
+    { name: 'Laravel', icon: <ApiOutlined />, level: 85 },
     { name: 'Three.js', icon: <EnvironmentOutlined />, level: 70 },
     { name: 'Nuxt.js', icon: <LayoutOutlined />, level: 60 },
     { name: 'Vue.js', icon: <AppstoreOutlined />, level: 65 },
@@ -36,7 +36,7 @@ const About = () => {
 
   const technologies = [
     'React', 'Next.js', 'TypeScript', 'Python', 'Three.js', 'Vue.js', 
-    'GSAP', 'Tailwind CSS', 'MySQL', 'SQL Server', 'Docker', 'Nuxt.js', 'Vue.js', 'HTML/CSS', 'Laravel', '.NET',
+    'Tailwind CSS', 'MySQL', 'SQL Server', 'Docker', 'Nuxt.js', 'Vue.js', 'HTML/CSS', 'Laravel', '.NET',
     'Power BI', 'Power Automate', 'Power Point', 'VBA Excel', 'Azure DevOps', 'GIT', 'Blender', 'Sharepoint', 'Figma', 'Slack', 'Microsoft Teams'
   ];
 
