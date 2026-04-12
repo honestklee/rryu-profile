@@ -42,7 +42,7 @@ const Projects = () => {
       title: 'BSMR Website',
       description: 'Implementation RBAC, Payment Gateway, Create Statistic for report, Email Schedule, and Makesure the website User Friendly. (Remake Website) From BSMR',
       image: '/Web/BSMR.png',
-      technologies: ['React', 'Python', 'Tailwind', 'MySQL', 'NextJS', 'aws', 'SQLAlchemy'],
+      technologies: ['React', 'Python', 'Tailwind', 'MySQL', 'NextJS', 'AWS', 'SQLAlchemy'],
       category: 'fullstack',
       github: 'https://github.com',
       live: 'https://example.com',
