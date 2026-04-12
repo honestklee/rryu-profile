@@ -21,7 +21,7 @@ const Experiences = () => {
       title: 'Software Engineer',
       company: 'Quantum Technology Nusantara',
       location: 'Jakarta, Indonesia',
-      period: '2024 - Present',
+      period: '2024 - April 2025',
       type: 'full-time',
       description: 'A technology agency located in South Jakarta, my responsibility is to meet client needs and develop several products andapplications to be sold or used as Quantum products, such as Meepo, Kenangan, and others.',
       achievements: [
